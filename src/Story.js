@@ -187,8 +187,8 @@ function Story() {
         <p>--</p>
         <p>So that was the locations, we got them. Then it came to times—I know this is getting technical, but stay with me. </p>
         <p>From the records, we only knew the “years” according to your human calendars, but that was too rough. We couldn’t figure out where he was heading towards or which records were his last locations if we didn’t have more precise times. </p>
-        <p>That’s when we had a bit more luck: that “specialized device” in the researcher’s backpack was part of their project measuring sea ice levels, and that device somehow snuggled sea ice level measurements and warming and cooling seasons into the dataset. </p>
-        <p>You are wondering how that’s useful, right? I have to say, on that part, the researcher surely outsmarted us both! It was a simple logic: she just assumed that the sea ice level always fell during the warming season, and always rose during the cooling season. That way, she only needed to map the sea ice levels on my cousin’s records between the minimum and maximum sea ice levels of each year, and Voila! We knew the order of these records!</p>
+        <p>That’s when we had a bit more luck: that “specialized device” in the researcher’s backpack was part of their project measuring sea ice levels, and that device somehow snuggled sea ice level measurements and cooling and warming seasons into the dataset. </p>
+        <p>You are wondering how that’s useful, right? I have to say, on that part, the researcher surely outsmarted us both! It was a simple logic: she just assumed that the sea ice level always rose during the cooling season, that is, first half of your human year, and it always fell during the warming season, i.e. second half of year. That way, she only needed to map the sea ice levels on my cousin’s records between the minimum and maximum sea ice levels of each year, and Voila! We knew the order of these records!</p>
         <p>Did that go too fast? Eh, I guess you have to draw it out yourself. Do you have paper and pencil? Oh, is everything soaked already? Duh. Let’s just use water to draw on the wood planks over there—</p>
         <p>--</p>
       </Row>
@@ -200,12 +200,12 @@ function Story() {
           <li>Create a new column for granular time by interpolating between min and max values of each year. 
             <ul>
               <li>When in doubt, you could use these formulae:</li>
-              <li>If in warming season: 
+              <li>If in cooling season (first half of year): 
                 <ul>
                   <li>Time Interpolation = 0.5 * (Sea Ice Level – Min Level)/(Max Level – Min Level)</li>
                 </ul>
               </li>              
-              <li>If in cooling season: 
+              <li>If in warming season (second half of year): 
                 <ul>
                   <li>Time Interpolation = 0.5 + 0.5 * (Sea Ice Level – Max Level)/(Min Level – Max Level)</li>
                 </ul>
