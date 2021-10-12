@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
+import Spinner from "react-bootstrap/Spinner";
+
 
 import client from "./api";
 import Login from "./Login";
@@ -11,7 +13,7 @@ import "dataland-gui/dist/main.css";
 import "./App.css";
 
 function App() {
-  const [login, setLogin] = useState(null);
+  const [login, setLogin] = useState();
 
   useEffect(() => {
     client.authenticate().catch(() => {
@@ -29,8 +31,8 @@ function App() {
 
   if (login === undefined) {
     return (
-      <Container fluid className="d-flex flex-column min-vh-100">
-        <h1>Loading...</h1>
+      <Container fluid className="d-flex min-vh-100 align-items-center justify-content-center">
+        <h1><Spinner animation="border" role="status"/>Loading…</h1>
       </Container>
     );
   } else if (login) {
@@ -51,7 +53,7 @@ function App() {
   }
 
   return (
-    <Container fluid className="d-flex flex-column min-vh-100">
+    <Container fluid className="d-flex flex-column min-vh-100 justify-content-center">
       <Login />
     </Container>
   );

@@ -15,7 +15,7 @@ function Login() {
 
   return (
     <Row className="justify-content-md-center">
-      <Col xs lg="2" className="py-5 text-center">
+      <Col xs lg="2" className="py-5 text-center bg-light">
         <h1 className="h3">Please log in</h1>
         <div className="d-flex justify-content-center align-items-center">
           <Form className="login-form">
@@ -43,18 +43,21 @@ function Login() {
               onClick={(ev) => {
                 ev.preventDefault();
                 setError("");
-                client.authenticate({strategy: "local", username, password}).catch(err => setError(err.message));
+                client
+                  .authenticate({ strategy: "local", username, password })
+                  .catch((err) => setError(err.message));
               }}
               disabled={username === "" && password === ""}
             >
-                    Log in
+              Log in
             </Button>
-            {error !== "" && (
-              <Alert variant="danger" className="mt-2 align-middle">
-                <strong>Error: </strong>
-                {error}
-              </Alert>
-            )}
+            <Alert
+              variant="danger"
+              className={`mt-2 align-middle ${error !== "" ? "visible" : "invisible"}`}
+            >
+              <strong>Error: </strong>
+              {error}
+            </Alert>
           </Form>
         </div>
       </Col>
