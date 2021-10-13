@@ -7,7 +7,7 @@ import Spinner from "react-bootstrap/Spinner";
 
 import client from "./api";
 import Login from "./Login";
-import Story from "./Story";
+import Story from "./stories/story1";
 
 import "dataland-gui/dist/main.css";
 import "./App.css";

@@ -4,9 +4,9 @@ import Row from "react-bootstrap/Row";
 import Spinner from "react-bootstrap/Spinner";
 
 
-import apiClient from "./api";
-import Editor from "./Editor";
-import "./Story.css";
+import apiClient from "../../api";
+import Editor from "../../Editor";
+import "./style.css";
 
 const NOTEBOOK_ID = 1;
 const initialProjects = [
@@ -59,6 +59,7 @@ const initialProjects = [
     notebookSequence: 8,
   },
 ];
+
 
 function Story() {
   const projectsService = apiClient.service("projects");
