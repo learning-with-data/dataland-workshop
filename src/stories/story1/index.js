@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 
+import { decode } from "base64-arraybuffer";
+
 import Row from "react-bootstrap/Row";
 import Spinner from "react-bootstrap/Spinner";
-
 
 import apiClient from "../../api";
 import Editor from "../../Editor";
@@ -60,7 +61,6 @@ const initialProjects = [
   },
 ];
 
-
 function Story() {
   const projectsService = apiClient.service("projects");
   const [projectsList, setProjectsList] = useState([]);
@@ -75,6 +75,13 @@ function Story() {
         },
       });
       if (result.total === 0) {
+        // No projects exist, create from seed projects
+        // Dynamic import is used to reduce unnecessary loads of the seed file
+        let { default: projectBlobs } = await import("./blobs.json");
+
+        projectBlobs.forEach((blob, i) => {
+          initialProjects[i].projectBlob = decode(blob);
+        });
         const newProjects = await projectsService.create(initialProjects);
         setProjectsList(newProjects.map((project) => project.id));
       } else {
@@ -85,7 +92,12 @@ function Story() {
   }, []);
 
   if (projectsList.length === 0) {
-    return <><Spinner animation="border" role="status"/>Loading…</>;
+    return (
+      <>
+        <Spinner animation="border" role="status" />
+        Loading…
+      </>
+    );
   }
   return (
     <>
