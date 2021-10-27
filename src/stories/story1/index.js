@@ -302,8 +302,8 @@ function Story() {
         </h3>
         <h3>
           Additionally, the traveling penguin says their cousin is, of course,
-          also an Adelie penguin, and he weighs about [xx] grams, has a [flat]
-          bill and [long] flippers.
+          also an Adelie penguin, and he has a flat, short bill that often makes 
+          him stand out among penguins.
         </h3>
         <ul>
           <li>
