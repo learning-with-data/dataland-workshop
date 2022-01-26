@@ -1,0 +1,15 @@
+[Unit]
+Description=Dataland Backend
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/npm start
+Restart=always
+User=vagrant
+Environment=NODE_ENV=development
+WorkingDirectory=/srv/dataland-backend
+
+[Install]
+RequiredBy=dataland-workshop-frontend.service
+WantedBy=multi-user.target
