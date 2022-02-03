@@ -15,6 +15,9 @@
 # misc
 .DS_Store
 
+# Vagrant
+.vagrant
+
 # Non-public configuration variables
 .env
 

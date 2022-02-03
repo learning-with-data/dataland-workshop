@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "serve": "npx serve -s dist -l 8080",
-    "start": "webpack-dev-server --open --mode development",
+    "start": "webpack-dev-server --open --mode development --host 0.0.0.0",
     "lint": "eslint src test",
     "pretest": "npm run lint",
     "test": "cypress run --browser chrome --headless",

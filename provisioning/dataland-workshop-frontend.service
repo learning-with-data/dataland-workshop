@@ -1,0 +1,14 @@
+[Unit]
+Description=Dataland Workshop Frontend
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/npm start
+Restart=always
+User=vagrant
+Environment=NODE_ENV=development
+WorkingDirectory=/vagrant
+
+[Install]
+WantedBy=multi-user.target
