@@ -58,7 +58,7 @@
     "@react-leaflet/core": "1.0.2",
     "base64-arraybuffer": "^1.0.1",
     "bootstrap": "^4.5.0",
-    "dataland-gui": "git+https://github.com/learning-with-data/dataland-gui.git#development",
+    "dataland-gui": "github:learning-with-data/dataland-gui#development",
     "dayjs": "^1.8.29",
     "leaflet": "1.7.1",
     "react": "^16.13.1",
