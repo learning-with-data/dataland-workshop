@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import Spinner from "react-bootstrap/Spinner";
 
-import Gui from "dataland-gui";
+import { Gui } from "dataland-gui";
 
 import apiClient from "./api";
 
@@ -22,7 +22,12 @@ function Editor(props) {
   }, []);
 
   if (initialProject === null) {
-    return <div className="editor"><Spinner animation="border" role="status"/>Loading…</div>;
+    return (
+      <div className="editor">
+        <Spinner animation="border" role="status" />
+        Loading…
+      </div>
+    );
   } else {
     return (
       <div className="editor">
