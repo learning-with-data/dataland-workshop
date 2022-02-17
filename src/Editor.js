@@ -7,6 +7,17 @@ import { Gui } from "dataland-gui";
 
 import apiClient from "./api";
 
+const blocklyInjectionOptions = {
+  zoom: {
+    controls: true,
+    wheel: false,
+    startScale: 0.85,
+    maxScale: 4,
+    minScale: 0.25,
+    scaleSpeed: 1.1,
+  },
+};
+
 function Editor(props) {
   const projectsService = apiClient.service("projects");
   const [initialProject, setInitialProject] = useState(null);
@@ -49,6 +60,7 @@ function Editor(props) {
           backendMetaDataSaveHandler={(p) => {
             projectsService.patch(props.projectId, p);
           }}
+          blocklyInjectionOptions={blocklyInjectionOptions}
         />
       </div>
     );
