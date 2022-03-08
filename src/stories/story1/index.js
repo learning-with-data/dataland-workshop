@@ -107,6 +107,7 @@ function Story() {
           <h2>Act 0: A Traveling Penguin’s Tale</h2>
 
           <p>
+            <Example />
             Hi there, the walking one—I mean, the human over there. Yes, I am
             talking to you. Is it so rare seeing a penguin talking?{" "}
           </p>
