@@ -72,6 +72,10 @@ module.exports = {
       redux: path.join(process.cwd(), "node_modules/redux"),
       lodash: path.join(process.cwd(), "node_modules/lodash"),
     },
+    fallback: {
+      stream: require.resolve("stream-browserify"),
+      timers: require.resolve("timers-browserify"),
+    },
   },
   devServer: {
     port: 3000,
@@ -80,7 +84,6 @@ module.exports = {
     new CleanWebpackPlugin(),
     new CopyPlugin({
       patterns: [
-        { from: "./public", to: "./" },
         {
           from: "./node_modules/dataland-gui/dist/blocks-media",
           to: "./blocks-media/",
