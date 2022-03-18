@@ -9,6 +9,11 @@ import Spinner from "react-bootstrap/Spinner";
 import apiClient from "../../api";
 import Editor from "../../Editor";
 import "./style.css";
+import Popup from "../../Popup";
+
+import popupTexts from "./popup-content.json";
+
+import penguin_fishing_img from "../../img/penguin_fishing.jpg"
 
 const NOTEBOOK_ID = 1;
 const initialProjects = [
@@ -62,6 +67,17 @@ const initialProjects = [
   },
 ];
 
+function CreatePopup(popupTexts, keyword) {
+  const popupText = popupTexts.find(function (item) {return item.title===keyword});
+  return(
+    <Popup
+      title = {popupText.title}
+      content = {popupText.content}
+    />
+  );
+}
+
+
 function Story() {
   const projectsService = apiClient.service("projects");
   const [projectsList, setProjectsList] = useState([]);
@@ -105,7 +121,9 @@ function Story() {
       <Row>
         <Col md={{ span: 10, offset: 1 }}>
           <h2>Act 0: A Traveling Penguin’s Tale</h2>
-
+          <div className = "img-container">
+            <img src={penguin_fishing_img} className = "img-fluid"/>
+          </div>
           <p>
             Hi there, the walking one—I mean, the human over there. Yes, I am
             talking to you. Is it so rare seeing a penguin talking?{" "}
@@ -197,7 +215,7 @@ function Story() {
           <ul>
             <li>Try out the Control blocks in Dataland.</li>
             <li>Try out the Operators.</li>
-            <li>Try to make a new variable from data in the table.</li>
+            <li>Try to make a new variable{CreatePopup(popupTexts, "variable")} from data in the table.</li>
             <li>
               Try to add a new column, and fill it with processed data from a
               different column.
@@ -313,7 +331,7 @@ function Story() {
           <ul>
             <li>
               Within the data gathered by this human, plot out the body
-              characteristics of the penguins, see how data cluster, and find
+              characteristics of the penguins, see how data cluster{CreatePopup(popupTexts, "cluster")}, and find
               the cluster that corresponds to the missing cousin.
             </li>
           </ul>
@@ -420,7 +438,7 @@ function Story() {
           <ul>
             <li>
               Plot out data rows on the map, and color the data marks by Penguin
-              Grid Names. Compare the distribution of these and figure out how
+              Grid Names. Compare the distribution{CreatePopup(popupTexts, "distribution")} of these and figure out how
               names and geographic features match.
             </li>
             <li>
@@ -480,7 +498,7 @@ function Story() {
               them in variables.
             </li>
             <li>
-              Create a new column for granular time by interpolating between min
+              Create a new column for granular time by interpolating{CreatePopup(popupTexts, "interpolating")} between min
               and max values of each year.
               <ul>
                 <li>When in doubt, you could use these formulae:</li>
@@ -632,7 +650,7 @@ function Story() {
           <ul>
             <li>
               Update to dataset: a new column “Recorded Snowstorm around the
-              Time” is now added. It’s a binary column showing if there has been
+              Time” is now added. It’s a binary{CreatePopup(popupTexts, "binary")} column showing if there has been
               a recorded snowstorm around the estimated time of the year.{" "}
             </li>
             <li>
