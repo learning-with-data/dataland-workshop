@@ -13,13 +13,24 @@
     font-size: smaller;
 }
 
-.img-fluid {
-    max-width: 100%;
+.img-front {
+    max-width: 90%;
 }
 
-.img-container {
+.img-div {
+    max-width: 50%;
+}
+
+.img-container-front {
     padding-top: 2em;
     padding-bottom: 2em;
-    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.img-container-div {
+    padding-top: 2em;
+    padding-bottom: 7em;
+    display: flex;
     justify-content: center;
 }

@@ -13,7 +13,8 @@ import Popup from "../../Popup";
 
 import popupTexts from "./popup-content.json";
 
-import penguin_fishing_img from "../../img/penguin_fishing.jpg"
+import penguin_fishing_img from "../../img/penguin_fishing.jpg";
+import penguin_div_img from "../../img/penguin-div.jpg";
 
 const NOTEBOOK_ID = 1;
 const initialProjects = [
@@ -121,8 +122,8 @@ function Story() {
       <Row>
         <Col md={{ span: 10, offset: 1 }}>
           <h2>Act 0: A Traveling Penguin’s Tale</h2>
-          <div className = "img-container">
-            <img src={penguin_fishing_img} className = "img-fluid"/>
+          <div className = "img-container-front">
+            <img src={penguin_fishing_img} className = "img-fluid img-front"/>
           </div>
           <p>
             Hi there, the walking one—I mean, the human over there. Yes, I am
@@ -239,6 +240,9 @@ function Story() {
             making me quite… sleepy…
           </p>
           <p>(End of Act 0)</p>
+          <div className = "img-container-div">
+            <img src={penguin_div_img} className = "img-fluid img-div"/>
+          </div>
         </Col>
       </Row>
 
@@ -390,6 +394,9 @@ function Story() {
             not designed for this—
           </p>
           <p>(End of Act 1)</p>
+          <div className = "img-container-div">
+            <img src={penguin_div_img} className = "img-fluid img-div"/>
+          </div>
         </Col>
       </Row>
 
@@ -555,15 +562,16 @@ function Story() {
             to catch cold with wet furs.{" "}
           </p>
           <p>(End of Act 2)</p>
+          <div className = "img-container-div">
+            <img src={penguin_div_img} className = "img-fluid img-div"/>
+          </div>
         </Col>
       </Row>
 
-      <Row>
-        <h2>Act 3: Finding Cousin</h2>
-      </Row>
 
       <Row>
         <Col md={{ span: 10, offset: 1 }}>
+        <h2>Act 3: Finding Cousin</h2>
           <p>
             It surely is cozy down here. I think we’re gonna have a windy sail
             tonight. I hope the heaters on this ship keep up, or we’ll be frozen
@@ -708,6 +716,9 @@ function Story() {
             brilliant sunrise… Did that rhyme? O, me, a traveling penguin poet…{" "}
           </p>
           <p>(THE END)</p>
+          <div className = "img-container-div">
+            <img src={penguin_div_img} className = "img-fluid img-div"/>
+          </div>
         </Col>
       </Row>
     </>
