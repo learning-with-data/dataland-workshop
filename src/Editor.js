@@ -46,7 +46,8 @@ function Editor(props) {
           initialProjectTitle={initialProject.title}
           backend={true}
           initialProject={new Uint8Array(initialProject.projectBlob)}
-          microworld="plots"
+          microworld={props.microworld ? props.microworld : "plots"}
+          hideDataImportButton={props.hideDataImportButton}
           backendCodeSaveHandler={(c) => {
             projectsService.patch(props.projectId, {
               projectBlob: c,
@@ -69,6 +70,8 @@ function Editor(props) {
 
 Editor.propTypes = {
   projectId: PropTypes.number.isRequired,
+  microworld: PropTypes.string,
+  hideDataImportButton: PropTypes.bool,
 };
 
 export default Editor;
