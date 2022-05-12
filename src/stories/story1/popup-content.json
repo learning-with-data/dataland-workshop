@@ -1,30 +1,27 @@
 [
-    {
-        "id": 1,
-        "title": "variable",
-        "content": "placeholder explanation"
-    },
-    {
-        "id": 2,
-        "title": "distribution",
-        "content": "placeholder explanation"
-    }
-    ,
-    {
-        "id": 3,
-        "title": "cluster",
-        "content": "placeholder explanation"
-    }
-    ,
-    {
-        "id": 4,
-        "title": "interpolating",
-        "content": "placeholder explanation"
-    }
-    ,
-    {
-        "id": 5,
-        "title": "binary",
-        "content": "placeholder explanation"
-    }
+  {
+    "id": 1,
+    "title": "variable",
+    "content": "A variable is a placeholder for a value that may change. In our case, it can be a number or text. "
+  },
+  {
+    "id": 2,
+    "title": "distribution",
+    "content": "In our case, distribution refers to the shape the data forms when it is plotted."
+  },
+  {
+    "id": 3,
+    "title": "cluster",
+    "content": "A cluster means a group of data that are similar to each other (e.g., closer to each other) than those in other groups."
+  },
+  {
+    "id": 4,
+    "title": "interpolating",
+    "content": "Interpolating is the act of finding new data points based on seeing some existing ones. For example, we can interpolate 4, 9, 16 to 25, 36, 49... when we recognize that 4,9,16 are squares of 2,3,4."
+  },
+  {
+    "id": 5,
+    "title": "binary",
+    "content": "Binary data refers to a type of data that has exactly two possible values. For example, the status of a light switch is binary because it can either be 'on' or 'off'."
+  }
 ]
