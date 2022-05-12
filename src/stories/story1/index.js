@@ -226,7 +226,7 @@ function Story() {
       </Row>
 
       <Row>
-        <Editor projectId={projectsList[0]} />
+        <Editor projectId={projectsList[0]} hideDataImportButton={true}/>
       </Row>
 
       <Row>
@@ -287,7 +287,7 @@ function Story() {
       </Row>
 
       <Row>
-        <Editor projectId={projectsList[1]} />
+        <Editor projectId={projectsList[1]} hideDataImportButton={true} />
       </Row>
 
       <Row>
@@ -343,7 +343,7 @@ function Story() {
       </Row>
 
       <Row>
-        <Editor projectId={projectsList[2]} />
+        <Editor projectId={projectsList[2]} hideDataImportButton={true} />
       </Row>
 
       <Row>
@@ -378,7 +378,7 @@ function Story() {
       </Row>
 
       <Row>
-        <Editor projectId={projectsList[3]} />
+        <Editor projectId={projectsList[3]} hideDataImportButton={true} />
       </Row>
 
       <Row>
@@ -461,7 +461,7 @@ function Story() {
       </Row>
 
       <Row>
-        <Editor projectId={projectsList[4]} />
+        <Editor projectId={projectsList[4]} hideDataImportButton={true} microworld="map"/>
       </Row>
 
       <Row>
@@ -544,7 +544,7 @@ function Story() {
       </Row>
 
       <Row>
-        <Editor projectId={projectsList[5]} />
+        <Editor projectId={projectsList[5]} hideDataImportButton={true} />
       </Row>
 
       <Row>
@@ -603,7 +603,7 @@ function Story() {
       </Row>
 
       <Row>
-        <Editor projectId={projectsList[6]} />
+        <Editor projectId={projectsList[6]} hideDataImportButton={true} microworld="map"/>
       </Row>
 
       <Row>
@@ -671,7 +671,7 @@ function Story() {
       </Row>
 
       <Row>
-        <Editor projectId={projectsList[7]} />
+        <Editor projectId={projectsList[7]} hideDataImportButton={true} />
       </Row>
 
       <Row>
