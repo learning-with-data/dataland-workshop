@@ -461,7 +461,7 @@ function Story() {
       </Row>
 
       <Row>
-        <Editor projectId={projectsList[4]} hideDataImportButton={true} microworld="map"/>
+        <Editor projectId={projectsList[4]} hideDataImportButton={true} microworld="maps"/>
       </Row>
 
       <Row>
@@ -603,7 +603,7 @@ function Story() {
       </Row>
 
       <Row>
-        <Editor projectId={projectsList[6]} hideDataImportButton={true} microworld="map"/>
+        <Editor projectId={projectsList[6]} hideDataImportButton={true} microworld="maps"/>
       </Row>
 
       <Row>
