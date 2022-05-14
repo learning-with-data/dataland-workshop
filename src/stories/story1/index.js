@@ -69,15 +69,11 @@ const initialProjects = [
 ];
 
 function CreatePopup(popupTexts, keyword) {
-  const popupText = popupTexts.find(function (item) {return item.title===keyword});
-  return(
-    <Popup
-      title = {popupText.title}
-      content = {popupText.content}
-    />
-  );
+  const popupText = popupTexts.find(function (item) {
+    return item.title === keyword;
+  });
+  return <Popup title={popupText.title} content={popupText.content} />;
 }
-
 
 function Story() {
   const projectsService = apiClient.service("projects");
@@ -122,30 +118,30 @@ function Story() {
       <Row>
         <Col md={{ span: 10, offset: 1 }}>
           <h2>Act 0: A Traveling Penguin’s Tale</h2>
-          <div className = "img-container-front">
-            <img src={penguin_fishing_img} className = "img-fluid img-front"/>
+          <div className="img-container-front">
+            <img src={penguin_fishing_img} className="img-fluid img-front" />
           </div>
           <p>
             Hi there, the walking one—I mean, the human over there. Yes, I am
-            talking to you. Is it so rare seeing a penguin talking?{" "}
+            talking to you. Is it so rare seeing a penguin talking?
           </p>
           <p>
             What am I doing? Oh, just fishing by the side of this boat.
             Something that a human recently told me about. But honestly, look at
-            this rod and this string. It’s pretty, um, inefficient, isn’t it?{" "}
+            this rod and this string. It’s pretty, um, inefficient, isn’t it?
           </p>
           <p>
             And you humans have a whole set of categories to talk about
             different kinds of fish—do you even see how random that is? Fish
             don’t just live in your categories, people. But I’m complaining too
             much. As long as that helps with your very slow way of fishing, I
-            guess it’s fine.{" "}
+            guess it’s fine.
           </p>
           <p>
-            I mean, I also can’t always blame your category stuffs anyways. One
-            time, those stuffs kind of helped me searching for my cousin. I
-            guess at the end they didn’t, but they did until maybe halfway…
-            Come, let me tell you the story.{" "}
+            I mean, I also can’t always blame your category stuff anyways. One
+            time, those things kind of helped me search for my cousin. I guess
+            at the end they didn’t, but they did until maybe halfway… Come, let
+            me tell you the story.
           </p>
           <p>
             Oh, and just sit by me, over there. This fishing stuff is gonna take
@@ -153,40 +149,40 @@ function Story() {
           </p>
           <p>--</p>
           <p>
-            You see, I am one who loves travelling the world, and I only go back
+            You see, I am one who loves traveling the world, and I only go back
             to my land from time to time. There lives my cousin, and he always
-            welcomes me back.{" "}
+            welcomes me back.
           </p>
           <p>
-            I guess it was the year 2010, in you humans’ calendar. That year I
-            went back to the land, and he wasn’t there. I asked our families,
+            I guess it was the year of 2010, in your humans’ calendar. That year
+            I went back to the land, and he wasn’t there. I asked our families,
             and no one knew where he had gone. They only told me that maybe he
             was gone before a huge snowstorm. Let me tell you, that’s not
-            helping.{" "}
+            helping.
           </p>
           <p>
             I was so lost. I just couldn’t track him down the entire snow land.
-            Well, that’s when you humans came in. Them someone told me that
+            Well, that’s when you humans came in. Then someone told me that
             there was a group of you out there those days, following us
-            everywhere, and one of you have been following my cousin. Look, I
+            everywhere, and one of you has been following my cousin. Look, I
             didn’t know what she wanted, and I didn’t judge her, but I thought
-            you probably need to stop stalking us—I’m off my topic.{" "}
+            you probably need to stop stalking us—I’m off topic.
           </p>
           <p>
             So knowing that, I thought ok, at least that stalker, she could help
             me this time. So I figured where you humans were living. I think
-            it’s called Palmer Station. I reached out to the humans there, and
-            unsurprisingly, no one knew who my cousin was. Still, they offered
-            to help.{" "}
+            it’s called <em>Palmer Station</em>. I reached out to the humans
+            there, and unsurprisingly, no one knew who my cousin was. Still,
+            they offered to help.
           </p>
           <p>
             It also turned out that, fair enough, those humans were doing some
             scientific research for pretty noble reasons (I would prefer you
             just ask us, though). And then, they offered me one of your
-            categorical stuffs—namely, datasets—and tools to help. So that’s
+            categorical things—namely, datasets—and tools to help. So that’s
             when I got all of these things from them—
           </p>
-          <p>--</p>
+          <hr />
         </Col>
       </Row>
 
@@ -198,15 +194,14 @@ function Story() {
           </h3>
           <ul>
             <li>
-              Look at the codebook and discuss what the columns are about. How
-              do you think humans may have gathered data for each column? What
-              impact do you think that data gathering process may produce?{" "}
+              Think about what the columns are about. How do you think humans
+              may have gathered data for each column? What impact do you think
+              that data gathering process may produce?
             </li>
             <li>
-              Import the dataset into the Dataland window below. Skim through
-              the data rows. What are the names and scales of measurements
-              humans use to describe penguins and islands? What does it mean to
-              categorize and measure things this way?{" "}
+              Skim through the data rows. What are the names and scales of
+              measurements that humans use to describe penguins and islands?
+              What does it mean to categorize and measure things this way?
             </li>
           </ul>
           <h3>
@@ -216,7 +211,10 @@ function Story() {
           <ul>
             <li>Try out the Control blocks in Dataland.</li>
             <li>Try out the Operators.</li>
-            <li>Try to make a new variable{CreatePopup(popupTexts, "variable")} from data in the table.</li>
+            <li>
+              Try to make a new variable{CreatePopup(popupTexts, "variable")}{" "}
+              from data in the table.
+            </li>
             <li>
               Try to add a new column, and fill it with processed data from a
               different column.
@@ -226,7 +224,7 @@ function Story() {
       </Row>
 
       <Row>
-        <Editor projectId={projectsList[0]} hideDataImportButton={true}/>
+        <Editor projectId={projectsList[0]} hideDataImportButton={true} />
       </Row>
 
       <Row>
@@ -240,8 +238,8 @@ function Story() {
             making me quite… sleepy…
           </p>
           <p>(End of Act 0)</p>
-          <div className = "img-container-div">
-            <img src={penguin_div_img} className = "img-fluid img-div"/>
+          <div className="img-container-div">
+            <img src={penguin_div_img} className="img-fluid img-div" />
           </div>
         </Col>
       </Row>
@@ -255,32 +253,35 @@ function Story() {
             is going really slow. I would rather just jump down from here and
             catch ten times more fish in a blink, and then come back up to take
             a nap with my stomach full. You sure need to endure some hunger to
-            enjoy this.{" "}
+            enjoy this.
           </p>
           <p>
             Where was I in my story? Oh, right. I was in Palmer Station with the
             stalkers—ok, researchers—and one of them must have been following my
-            cousin all around the place. None of them wanted to admit, or maybe
-            they really couldn’t tell us penguins apart. Whatever reason, I got
-            their records—that dataset, and later they have dug out some more
-            records from their boxes. With those, I started to figure out who
-            that human was, and also which parts of the records were about my
-            cousin.{" "}
+            cousin all around the place. None of them wanted to admit it, or
+            maybe they really couldn’t tell us penguins apart. For wWhatever
+            reason, I got their records—that dataset, and later they dug out
+            some more records from their boxes. With those, I started to figure
+            out who that human was, and also which parts of the records were
+            about my cousin.
           </p>
-          <p>--</p>
+          <hr />
           <h3>
             Task 1.1: The traveling penguin recalls that their families
             mentioned a human who always carries a big backpack. They also
-            figured out that those humans at Palmer Station called their family
-            Adelie. Use this information to find the human’s ID in the dataset.{" "}
+            figured out that those humans at Palmer Station called them the
+            <em>“Adelie”</em> family of penguins. Use this information to find
+            the human’s ID in the dataset.
           </h3>
           <ul>
             <li>
-              Filter through the humans and see who matches the characteristics.
+              Use the <tt>filter</tt> block on the humans and see who matches
+              the characteristics.
             </li>
             <li>
-              Group and see which human gathers the maximum number of data rows
-              within the right species. This human is the one we’re looking for.
+              Use the <tt>group By block</tt> and see which human gathers the
+              maximum number of data rows within the right species. This human
+              is the one we’re looking for.
             </li>
           </ul>
         </Col>
@@ -300,11 +301,11 @@ function Story() {
           <p>
             “I’m so sorry, my friend. We were just carrying out our research,
             and we didn’t know you could talk like this. And, that backpack was
-            for specialized devices.” She said.{" "}
+            for specialized devices.” She said.
           </p>
           <p>
             “Yeah, just talk with us next time. You humans never really talked
-            with us and that’s why we didn’t talk back.” I said.{" "}
+            with us and that’s why we didn’t talk back.” I said.
           </p>
           <p>
             “But we tried to ask. All we got were answers to some really basic
@@ -312,7 +313,7 @@ function Story() {
           </p>
           <p>
             “Then you probably didn’t ask it right. I’ll teach you when we have
-            time. Now, which ones are the data you made about my cousin?”{" "}
+            time. Now, which ones are the data you made about my cousin?”
           </p>
           <p>“Um… honestly, I can’t tell.”</p>
           <p>“What?”</p>
@@ -325,7 +326,7 @@ function Story() {
           <h3>
             Task 1.2: The researcher has gathered too many data rows. Now she
             can’t remember which data rows are about the missing cousin. We need
-            to find the correct rows.{" "}
+            to find the correct rows.
           </h3>
           <p>
             Additionally, the traveling penguin says their cousin is, of course,
@@ -335,8 +336,9 @@ function Story() {
           <ul>
             <li>
               Within the data gathered by this human, plot out the body
-              characteristics of the penguins, see how data cluster{CreatePopup(popupTexts, "cluster")}, and find
-              the cluster that corresponds to the missing cousin.
+              characteristics of the penguins, see how data cluster
+              {CreatePopup(popupTexts, "cluster")}, and find the cluster that
+              corresponds to the missing cousin.
             </li>
           </ul>
         </Col>
@@ -355,7 +357,7 @@ function Story() {
           </p>
           <p>
             “No no no, I mean, that bill! I totally remember him now! Check my
-            notes, I should have marked him every time I saw him.”{" "}
+            notes, I should have marked him every time I saw him.”
           </p>
           <p>“Well, alright.”</p>
           <p>--</p>
@@ -371,7 +373,7 @@ function Story() {
           <ul>
             <li>
               Filter out the data rows for the missing cousin and check the
-              Human Notes column: they should all bear the same special mark.{" "}
+              Human Notes column: they should all bear the same special mark.
             </li>
           </ul>
         </Col>
@@ -383,7 +385,7 @@ function Story() {
 
       <Row>
         <Col md={{ span: 10, offset: 1 }}>
-          <p>--</p>
+          <hr />
           <p>
             So, that was how I found the records of my cousin. I still didn’t
             know if those records were gonna help, but it started to become
@@ -394,8 +396,8 @@ function Story() {
             not designed for this—
           </p>
           <p>(End of Act 1)</p>
-          <div className = "img-container-div">
-            <img src={penguin_div_img} className = "img-fluid img-div"/>
+          <div className="img-container-div">
+            <img src={penguin_div_img} className="img-fluid img-div" />
           </div>
         </Col>
       </Row>
@@ -414,39 +416,40 @@ function Story() {
             But seriously, your fishing thing works so bad and now I need to get
             my fur dry—and you’d better dry that shaggy pocket that you put on
             your body, too. You humans just don’t know how to deal with the sea,
-            do you?{" "}
+            do you?
           </p>
           <p>
             Now that we need to dry ourselves on the deck, why don’t we go back
             to my story? I was there with the big backpack researcher, and we
             figured out which data belonged to my cousin. You thought then we
-            could just track him down, don’t you? Well, we realized that that
+            could just track him down, don’t you? Well, we realized that the
             researcher was stalking my cousin for her own project, and she
             didn’t keep the locations and times because she wasn’t really
-            interested in those.{" "}
+            interested in those.
           </p>
           <p>
             Luckily, we had some extra things to help. The human researchers did
             ask the penguins what names they would use to call different lands
             and places, and the humans recorded those names as “Penguin Grids”.
             To say the truth, we don’t really think of places in grids, but that
-            seems to be a metaphor that works for you.{" "}
+            seems to be a metaphor that works for you.
           </p>
           <p>
             And those grid names helped me as well, because the big backpack one
             also recorded those names, and we could figure out which names were
-            for which places, and roughly figure out where my cousin was going.{" "}
+            for which places, and roughly figure out where my cousin was going.
           </p>
-          <p>--</p>
+          <hr />
           <h3>
             Task 2.1: Use Penguin Grid Names to find out rough locations of the
-            missing cousin.{" "}
+            missing cousin.
           </h3>
           <ul>
             <li>
               Plot out data rows on the map, and color the data marks by Penguin
-              Grid Names. Compare the distribution{CreatePopup(popupTexts, "distribution")} of these and figure out how
-              names and geographic features match.
+              Grid Names. Compare the distribution
+              {CreatePopup(popupTexts, "distribution")} of these and figure out
+              how names and geographic features match.
             </li>
             <li>
               Calculate average longitudes and latitudes for each Penguin Grid
@@ -461,52 +464,57 @@ function Story() {
       </Row>
 
       <Row>
-        <Editor projectId={projectsList[4]} hideDataImportButton={true} microworld="maps"/>
+        <Editor
+          projectId={projectsList[4]}
+          hideDataImportButton={true}
+          microworld="maps"
+        />
       </Row>
 
       <Row>
         <Col md={{ span: 10, offset: 1 }}>
-          <p>--</p>
+          <hr />
           <p>
-            So that was the locations, we got them. Then it came to times—I know
-            this is getting technical, but stay with me.{" "}
+            So those were the locations, we got them. Then it came to times—I
+            know this is getting technical, but stay with me.
           </p>
           <p>
             From the records, we only knew the “years” according to your human
             calendars, but that was too rough. We couldn’t figure out where he
-            was heading towards or which records were his last locations if we
-            didn’t have more precise times.{" "}
+            was heading towards or which records his last locations were if we
+            didn’t have more precise times.
           </p>
           <p>
             That’s when we had a bit more luck: that “specialized device” in the
             researcher’s backpack was part of their project measuring sea ice
             levels, and that device somehow snuggled sea ice level measurements
-            and cooling and warming seasons into the dataset.{" "}
+            and cooling and warming seasons into the dataset.
           </p>
           <p>
             You are wondering how that’s useful, right? I have to say, on that
             part, the researcher surely outsmarted us both! It was a simple
             logic: she just assumed that the sea ice level always rose during
-            the cooling season, that is, first half of your human year, and it
-            always fell during the warming season, i.e. second half of year.
-            That way, she only needed to map the sea ice levels on my cousin’s
-            records between the minimum and maximum sea ice levels of each year,
-            and Voila! We knew the order of these records!
+            the cooling season, that is, the first half of your human year, and
+            it always fell during the warming season, i.e. the second half of
+            the year. That way, she only needed to map the sea ice levels on my
+            cousin’s records between the minimum and maximum sea ice levels of
+            each year, and Voila! We knew the order of these records!
           </p>
           <p>
             Did that go too fast? Eh, I guess you have to draw it out yourself.
             Do you have paper and pencil? Oh, is everything soaked already? Duh.
             Let’s just use water to draw on the wood planks over there—
           </p>
-          <p>--</p>
+          <hr />
           <ul>
             <li>
               Find the min and max Sea Ice Level values of each year, and store
               them in variables.
             </li>
             <li>
-              Create a new column for granular time by interpolating{CreatePopup(popupTexts, "interpolating")} between min
-              and max values of each year.
+              Create a new column for time (we call it “Time{" "}
+              {CreatePopup(popupTexts, "interpolation")}”) by using the min and
+              max sea ice levels of each year.
               <ul>
                 <li>When in doubt, you could use these formulae:</li>
                 <li>
@@ -549,29 +557,28 @@ function Story() {
 
       <Row>
         <Col md={{ span: 10, offset: 1 }}>
-          <p>--</p>
+          <hr />
           <p>
             See how that worked? No? I know it’s a lot, human. That researcher
             was smart to come up with this plan. That way we knew how my cousin
             was moving over time, and the only thing left was to figure out
-            where he was trying to go.{" "}
+            where he was trying to go.
           </p>
           <p>
             For that, if you don’t mind, let’s get into the cabin and talk about
             it. The wind is getting cold up here on the deck, and I don’t want
-            to catch cold with wet furs.{" "}
+            to catch cold with wet furs.
           </p>
           <p>(End of Act 2)</p>
-          <div className = "img-container-div">
-            <img src={penguin_div_img} className = "img-fluid img-div"/>
+          <div className="img-container-div">
+            <img src={penguin_div_img} className="img-fluid img-div" />
           </div>
         </Col>
       </Row>
 
-
       <Row>
         <Col md={{ span: 10, offset: 1 }}>
-        <h2>Act 3: Finding Cousin</h2>
+          <h2>Act 3: Finding Cousin</h2>
           <p>
             It surely is cozy down here. I think we’re gonna have a windy sail
             tonight. I hope the heaters on this ship keep up, or we’ll be frozen
@@ -581,7 +588,7 @@ function Story() {
           <p>
             Ah, the warmth is making me sleepy. But I guess we should stay awake
             until we dry ourselves. Let me get back to my story. Where were we?
-            Right, we were trying to figure out where my cousin wanted to go.{" "}
+            Right, we were trying to figure out where my cousin wanted to go.
           </p>
           <p>
             He is a mysterious one, I tell you. Even I can’t always tell what
@@ -589,11 +596,11 @@ function Story() {
             But the researcher, she was totally confident in her data. I totally
             need to give her a lesson on no stalking policy, though.
           </p>
-          <p>--</p>
+          <hr />
           <h3>
             Task 3.1: The traveling penguin now wants to figure out what their
-            cousin was up to. Use the results from last task to see if there’s a
-            pattern.
+            cousin was up to. Use the results from the last task to see if
+            there’s a pattern.
           </h3>
           <ul>
             <li>Do you see a pattern on the missing cousin’s movement?</li>
@@ -603,7 +610,11 @@ function Story() {
       </Row>
 
       <Row>
-        <Editor projectId={projectsList[6]} hideDataImportButton={true} microworld="maps"/>
+        <Editor
+          projectId={projectsList[6]}
+          hideDataImportButton={true}
+          microworld="maps"
+        />
       </Row>
 
       <Row>
@@ -649,17 +660,18 @@ function Story() {
           <p>“But I don’t want to just give up.” She said.</p>
           <p>“Well, you’re stronger than I expected. Got any plans?”</p>
           <p>“Yes, let’s at least try one more thing.”</p>
-          <p>--</p>
+          <hr />
           <h3>
-            Task 3.2: The researcher doesn’t want to give up and suggest we try
+            Task 3.2: The researcher doesn’t want to give up and suggests we try
             one last thing: figuring out if there was a strong indicator of
-            snowstorms around the time.{" "}
+            snowstorms around the time.
           </h3>
           <ul>
             <li>
               Update to dataset: a new column “Recorded Snowstorm around the
-              Time” is now added. It’s a binary{CreatePopup(popupTexts, "binary")} column showing if there has been
-              a recorded snowstorm around the estimated time of the year.{" "}
+              Time” is now added. It’s a binary
+              {CreatePopup(popupTexts, "binary")} column showing if there has
+              been a recorded snowstorm around the estimated time of the year.{" "}
             </li>
             <li>
               Using the new column, try to predict what kinds of data record
@@ -676,7 +688,7 @@ function Story() {
 
       <Row>
         <Col md={{ span: 10, offset: 1 }}>
-          <p>--</p>
+          <hr />
           <p>
             I don’t know what I can tell you, human. Honestly, those possibility
             numbers didn’t mean much to me, but in our version of the model,
@@ -684,7 +696,7 @@ function Story() {
             was late in the night, and both of us were exhausted. People have
             tried to search the place where my cousin last appeared, and nothing
             was found. I was making up my mind to accept that he was lost
-            forever.{" "}
+            forever.
           </p>
           <p>
             And that’s when the airmails arrived at the Palmer Station. In
@@ -694,30 +706,30 @@ function Story() {
             and till today I still have no idea how he did that. The researcher
             would say let’s pull up the ship schedules and see if he caught a
             ship just like I do. I would say thanks but I’m too tired to go
-            through your records once more. But we did it anyways—we compared
-            the size of the bill print with the records, and they surely
-            matched.{" "}
+            through your records once more. But we did it anyway—we compared the
+            size of the bill print with the records, and they surely matched.
           </p>
           <p>
             So, that’s my story, human. I’m glad you’ve stayed this far, and I’m
-            sorry it’s kind of anti-climax. The researcher said data analyses
+            sorry it’s kind of an anti-climax. The researcher said data analyses
             could end up with not so exciting or even confusing results. I guess
             it’s just like the slow fishing thing you humans do. Maybe you are
             aiming at a big fish, but maybe your rod breaks. Or maybe you’ll
             eventually make a smaller catch, and I guess you should still feel
             proud of it. After all it’s part of the stories we all tell, of
             ourselves, of things and fellows around us. Well, at least I am
-            satisfied at the end.{" "}
+            satisfied at the end.
           </p>
           <p>
-            Now, since my furs are dry, and so is your shaggy pocket, I suggest
-            we both take a nap, and keep it warm through this windy night. The
-            warm air from heaters is so nice, and I bet tomorrow we will see a
-            brilliant sunrise… Did that rhyme? O, me, a traveling penguin poet…{" "}
+            Now, since my feathers are dry, and so is your shaggy pocket, I
+            suggest we both take a nap, and keep it warm through this windy
+            night. The warm air from the heaters is so nice, and I bet tomorrow
+            we will see a brilliant sunrise… Did that rhyme? O, me, a traveling
+            penguin poet…
           </p>
           <p>(THE END)</p>
-          <div className = "img-container-div">
-            <img src={penguin_div_img} className = "img-fluid img-div"/>
+          <div className="img-container-div">
+            <img src={penguin_div_img} className="img-fluid img-div" />
           </div>
         </Col>
       </Row>
