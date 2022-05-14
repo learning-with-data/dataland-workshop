@@ -17,7 +17,7 @@
   {
     "id": 4,
     "title": "interpolation",
-    "content": "Interpolation is the act of finding new data points based on seeing some existing ones. For example, we can interpolate 4, 9, 16 to 25, 36, 49... when we recognize that 4,9,16 are squares of 2,3,4."
+    "content": "Interpolation is the act of finding in-between data points based on seeing some existing ones. For example, we can interpolate 9 as in between 4, and 16 when we recognize that 4, and 16 are squares of 2 and 4."
   },
   {
     "id": 5,

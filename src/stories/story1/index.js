@@ -512,7 +512,7 @@ function Story() {
               them in variables.
             </li>
             <li>
-              Create a new column for time (we call it “Time{" "}
+              Create a new column for time (we call it “Time Interpolation
               {CreatePopup(popupTexts, "interpolation")}”) by using the min and
               max sea ice levels of each year.
               <ul>
