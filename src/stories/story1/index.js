@@ -208,18 +208,9 @@ function Story() {
             Task 0.2: After figuring out that dataset, let’s also try out the
             data analysis tools.
           </h3>
-          <ul>
-            <li>Try out the Control blocks in Dataland.</li>
-            <li>Try out the Operators.</li>
-            <li>
-              Try to make a new variable{CreatePopup(popupTexts, "variable")}{" "}
-              from data in the table.
-            </li>
-            <li>
-              Try to add a new column, and fill it with processed data from a
-              different column.
-            </li>
-          </ul>
+          Try to see if you can complete the activities in the activity cards
+          given to you. You can turn the card if you are stuck to see how to
+          complete the activity.
         </Col>
       </Row>
 
@@ -282,6 +273,12 @@ function Story() {
               Use the <tt>group By block</tt> and see which human gathers the
               maximum number of data rows within the right species. This human
               is the one we’re looking for.
+              <br />
+              <strong>Hint:</strong> You can create a new column called 'Penguin
+              Count'. Then you can group by the human_id column and set 'Penguin
+              Count' to count. When you plot the result as a bar plot (see how
+              to do that in the activity card), you can find the id of the human
+              with the maximum number of rows.
             </li>
           </ul>
         </Col>
@@ -339,6 +336,13 @@ function Story() {
               characteristics of the penguins, see how data cluster
               {CreatePopup(popupTexts, "cluster")}, and find the cluster that
               corresponds to the missing cousin.
+              <br />
+              <strong>Hint:</strong> Use the human-id from the previous task to
+              do the first round of filtering. Then, when you plot the results,
+              you will notice that a bunch of points are plotted very close
+              together. Hover on those points, and you will notice that each
+              point (penguin) has the same human-note associated with them. Make
+              a note of the note, as that comes up next.
             </li>
           </ul>
         </Col>
@@ -372,8 +376,12 @@ function Story() {
           </h3>
           <ul>
             <li>
-              Filter out the data rows for the missing cousin and check the
-              Human Notes column: they should all bear the same special mark.
+              Filter out the data rows for the missing cousin and using the
+              human note that you found from the previous clustering task. How
+              many rows do you get?
+              <br />
+              <strong>Hint:</strong> You can create a variable and set its value
+              to 'number of rows' once you filter.
             </li>
           </ul>
         </Col>
