@@ -15,6 +15,10 @@ import popupTexts from "./popup-content.json";
 
 import penguin_fishing_img from "../../img/penguin_fishing.jpg";
 import penguin_div_img from "../../img/penguin-div.jpg";
+import penguin_bill_img from "../../img/penguin_bill.png";
+import data_snapshot_1 from "../../img/data-snapshot-1.png";
+import data_snapshot_2 from "../../img/data-snapshot-2.png";
+import data_snapshot_3 from "../../img/data-snapshot-3.png";
 
 const NOTEBOOK_ID = 1;
 const initialProjects = [
@@ -66,6 +70,30 @@ const initialProjects = [
     notebookId: NOTEBOOK_ID,
     notebookSequence: 8,
   },
+  {
+    title: "Project 9",
+    description: "",
+    notebookId: NOTEBOOK_ID,
+    notebookSequence: 9,
+  },
+  {
+    title: "Project 10",
+    description: "",
+    notebookId: NOTEBOOK_ID,
+    notebookSequence: 10,
+  },
+  {
+    title: "Project 11",
+    description: "",
+    notebookId: NOTEBOOK_ID,
+    notebookSequence: 11,
+  },
+  {
+    title: "Project 12",
+    description: "",
+    notebookId: NOTEBOOK_ID,
+    notebookSequence: 12,
+  }
 ];
 
 function CreatePopup(popupTexts, keyword) {
@@ -117,7 +145,7 @@ function Story() {
     <>
       <Row>
         <Col md={{ span: 10, offset: 1 }}>
-          <h2>Act 0: A Traveling Penguin’s Tale</h2>
+          <h1>A Traveling Penguin’s Tale</h1>
           <div className="img-container-front">
             <img src={penguin_fishing_img} className="img-fluid img-front" />
           </div>
@@ -126,61 +154,16 @@ function Story() {
             talking to you. Is it so rare seeing a penguin talking?
           </p>
           <p>
-            What am I doing? Oh, just fishing by the side of this boat.
-            Something that a human recently told me about. But honestly, look at
-            this rod and this string. It’s pretty, um, inefficient, isn’t it?
+            What am I doing? Oh, just fishing by the side of this iceberg. But human, I do want to ask you to do me a favor.
           </p>
           <p>
-            And you humans have a whole set of categories to talk about
-            different kinds of fish—do you even see how random that is? Fish
-            don’t just live in your categories, people. But I’m complaining too
-            much. As long as that helps with your very slow way of fishing, I
-            guess it’s fine.
+            I am one who loves traveling the world, and I only go back to my land from time to time. There lives my cousin, and he always welcomes me back. However, this year I went back to the land, however, he wasn’t there. I asked our families, and no one knew where he had gone.
           </p>
           <p>
-            I mean, I also can’t always blame your category stuff anyways. One
-            time, those things kind of helped me search for my cousin. I guess
-            at the end they didn’t, but they did until maybe halfway… Come, let
-            me tell you the story.
+            Everyone’s kinda worried. They asked me - the smartest one of the entire family, thank you - to figure out where he is. I personally also want to find him of course - I want to tell him about the human boats that I saw on this trip - he doesn’t like swimming and is always interested in alternatives.
           </p>
           <p>
-            Oh, and just sit by me, over there. This fishing stuff is gonna take
-            some time.
-          </p>
-          <p>--</p>
-          <p>
-            You see, I am one who loves traveling the world, and I only go back
-            to my land from time to time. There lives my cousin, and he always
-            welcomes me back.
-          </p>
-          <p>
-            I guess it was the year of 2010, in your humans’ calendar. That year
-            I went back to the land, and he wasn’t there. I asked our families,
-            and no one knew where he had gone. They only told me that maybe he
-            was gone before a huge snowstorm. Let me tell you, that’s not
-            helping.
-          </p>
-          <p>
-            I was so lost. I just couldn’t track him down the entire snow land.
-            Well, that’s when you humans came in. Then someone told me that
-            there was a group of you out there those days, following us
-            everywhere, and one of you has been following my cousin. Look, I
-            didn’t know what she wanted, and I didn’t judge her, but I thought
-            you probably need to stop stalking us—I’m off topic.
-          </p>
-          <p>
-            So knowing that, I thought ok, at least that stalker, she could help
-            me this time. So I figured where you humans were living. I think
-            it’s called <em>Palmer Station</em>. I reached out to the humans
-            there, and unsurprisingly, no one knew who my cousin was. Still,
-            they offered to help.
-          </p>
-          <p>
-            It also turned out that, fair enough, those humans were doing some
-            scientific research for pretty noble reasons (I would prefer you
-            just ask us, though). And then, they offered me one of your
-            categorical things—namely, datasets—and tools to help. So that’s
-            when I got all of these things from them—
+            A friend told me that there have been a group of you out there these days, following us everywhere. I heard you are called “researchers” and you are studying us - not sure what that means. But I wonder if I can use your help - could you help me find my cousin?
           </p>
           <hr />
         </Col>
@@ -188,559 +171,347 @@ function Story() {
 
       <Row>
         <Col md={{ span: 10, offset: 1 }}>
-          <h3>
-            Task 0.1: The traveling penguin is trying to understand what the
-            dataset and the human tools are about. Help them out!
-          </h3>
-          <ul>
-            <li>
-              Think about what the columns are about. How do you think humans
-              may have gathered data for each column? What impact do you think
-              that data gathering process may produce?
-            </li>
-            <li>
-              Skim through the data rows. What are the names and scales of
-              measurements that humans use to describe penguins and islands?
-              What does it mean to categorize and measure things this way?
-            </li>
-          </ul>
-          <h3>
-            Task 0.2: After figuring out that dataset, let’s also try out the
-            data analysis tools.
-          </h3>
-          Try to see if you can complete the activities in the activity cards
-          given to you. You can turn the card if you are stuck to see how to
-          complete the activity.
-        </Col>
-      </Row>
-
-      <Row>
-        <Editor projectId={projectsList[0]} hideDataImportButton={true} />
-      </Row>
-
-      <Row>
-        <Col md={{ span: 10, offset: 1 }}>
-          <p>--</p>
+          <h2>
+            Task 0: A Useful Tool Called “Datasets”
+          </h2>
           <p>
-            That was a long process, wasn’t it? That was the first time I’ve
-            ever seen those human tools, and they looked pretty wild. They still
-            look wild to me now. I would really love to tell you how those tools
-            helped, but just let me doze off for a moment. This fishing thing is
-            making me quite… sleepy…
+            How? The other day I heard some of you talking about the thing called Datasets. They are quite useful tools and have information about us, that’s what I heard. Can you show me some of those to see if that is helpful?
           </p>
-          <p>(End of Act 0)</p>
-          <div className="img-container-div">
-            <img src={penguin_div_img} className="img-fluid img-div" />
+
+          <div className="task-container">
+            <h4>
+              Task 0.1: The penguin is trying to understand what the penguin dataset is about. Help them out!
+            </h4>
+            <p>
+              The following is a snapshot (i.e., first few rows) of the dataset:
+            </p>
+            <div className="img-container-front">
+              <img src={data_snapshot_1} className="img-fluid img-front" />
+            </div>
+            <p>
+              Use Dataland to explore the dataset! 
+            </p>
+            <ul>
+              <li>
+                What do you think each row represents?
+              </li>
+              <li>
+                Think about what the columns are about. How do you think humans may have gathered data for each column? Skim through the data rows. What are the names and scales of measurements that humans use to describe penguins and islands? What does it mean to categorize and measure things this way?
+              </li>
+            </ul>
+            <Row>
+              <Editor projectId={projectsList[0]} hideDataImportButton={true} />
+            </Row>
           </div>
-        </Col>
-      </Row>
-
-      <Row>
-        <Col md={{ span: 10, offset: 1 }}>
-          <h2>Act 1: Big Backpack and Flat Bill</h2>
-
+          
           <p>
-            I’m glad you’re still here with me, human. You humans’ fishing thing
-            is going really slow. I would rather just jump down from here and
-            catch ten times more fish in a blink, and then come back up to take
-            a nap with my stomach full. You sure need to endure some hunger to
-            enjoy this.
+            Ah, I think I get it now. In this dataset, every row is a record of a penguin in a particular year and every column is a characteristic of the penguin - that’s quite neat! So I can find my cousin if I know which row is him in the year of 2021!
           </p>
           <p>
-            Where was I in my story? Oh, right. I was in Palmer Station with the
-            stalkers—ok, researchers—and one of them must have been following my
-            cousin all around the place. None of them wanted to admit it, or
-            maybe they really couldn’t tell us penguins apart. For wWhatever
-            reason, I got their records—that dataset, and later they dug out
-            some more records from their boxes. With those, I started to figure
-            out who that human was, and also which parts of the records were
-            about my cousin.
+            But there are so many rows… I really need a way to narrow it down. 
           </p>
           <hr />
-          <h3>
-            Task 1.1: The traveling penguin recalls that their families
-            mentioned a human who always carries a big backpack. They also
-            figured out that those humans at Palmer Station called them the
-            <em>“Adelie”</em> family of penguins. Use this information to find
-            the human’s ID in the dataset.
-          </h3>
-          <ul>
-            <li>
-              Use the <tt>filter</tt> block on the humans and see who matches
-              the characteristics.
-            </li>
-            <li>
-              Use the <tt>group By block</tt> and see which human gathers the
-              maximum number of data rows within the right species. This human
-              is the one we’re looking for.
-              <br />
-              <strong>Hint:</strong> You can create a new column called 'Penguin
-              Count'. Then you can group by the human_id column and set 'Penguin
-              Count' to count. When you plot the result as a bar plot (see how
-              to do that in the activity card), you can find the id of the human
-              with the maximum number of rows.
-            </li>
-          </ul>
         </Col>
       </Row>
 
-      <Row>
-        <Editor projectId={projectsList[1]} hideDataImportButton={true} />
-      </Row>
 
       <Row>
         <Col md={{ span: 10, offset: 1 }}>
-          <p>--</p>
-          <p>
-            “Aha! So you were the one stalking my cousin, weren’t you? And you
-            were always carrying around a big backpack.” I said.
-          </p>
-          <p>
-            “I’m so sorry, my friend. We were just carrying out our research,
-            and we didn’t know you could talk like this. And, that backpack was
-            for specialized devices.” She said.
-          </p>
-          <p>
-            “Yeah, just talk with us next time. You humans never really talked
-            with us and that’s why we didn’t talk back.” I said.
-          </p>
-          <p>
-            “But we tried to ask. All we got were answers to some really basic
-            questions.”
-          </p>
-          <p>
-            “Then you probably didn’t ask it right. I’ll teach you when we have
-            time. Now, which ones are the data you made about my cousin?”
-          </p>
-          <p>“Um… honestly, I can’t tell.”</p>
-          <p>“What?”</p>
-          <p>--</p>
-        </Col>
-      </Row>
+          <h2>Task 1: Narrowing It Down</h2>
 
-      <Row>
-        <Col md={{ span: 10, offset: 1 }}>
-          <h3>
-            Task 1.2: The researcher has gathered too many data rows. Now she
-            can’t remember which data rows are about the missing cousin. We need
-            to find the correct rows.
-          </h3>
           <p>
-            Additionally, the traveling penguin says their cousin is, of course,
-            also an Adelie penguin, and he has a flat, short bill that often
-            makes him stand out among penguins.
+            Oh hey I have an idea! There are different groups of us - you humans call that “species”.  Let’s first narrow it down to the rows that are our species. Unfortunately I don’t know the name of the species that you human researcher used to call us. What I do know is that we have the shortest flipper length  and are the lightest in weight compared to other species of penguins. Can you do something with the dataset to find what species we are?
           </p>
-          <ul>
-            <li>
-              Within the data gathered by this human, plot out the body
-              characteristics of the penguins, see how data cluster
-              {CreatePopup(popupTexts, "cluster")}, and find the cluster that
-              corresponds to the missing cousin.
-              <br />
-              <strong>Hint:</strong> Use the human-id from the previous task to
-              do the first round of filtering. Then, when you plot the results,
-              you will notice that a bunch of points are plotted very close
-              together. Hover on those points, and you will notice that each
-              point (penguin) has the same human-note associated with them. Make
-              a note of the note, as that comes up next.
-            </li>
-          </ul>
-        </Col>
-      </Row>
 
-      <Row>
-        <Editor projectId={projectsList[2]} hideDataImportButton={true} />
-      </Row>
-
-      <Row>
-        <Col md={{ span: 10, offset: 1 }}>
-          <p>--</p>
-          <p>“Ahh, I remember that penguin now.” She said.</p>
-          <p>
-            “Thank you human. I think I’ve already found him though.” I said.
-          </p>
-          <p>
-            “No no no, I mean, that bill! I totally remember him now! Check my
-            notes, I should have marked him every time I saw him.”
-          </p>
-          <p>“Well, alright.”</p>
-          <p>--</p>
-        </Col>
-      </Row>
-
-      <Row>
-        <Col md={{ span: 10, offset: 1 }}>
-          <h3>
-            Task 1.3: The human recalls that she has been marking the cousin’s
-            data with some special mark.{" "}
-          </h3>
-          <ul>
-            <li>
-              Filter out the data rows for the missing cousin and using the
-              human note that you found from the previous clustering task. How
-              many rows do you get?
-              <br />
-              <strong>Hint:</strong> You can create a variable and set its value
-              to 'number of rows' once you filter.
-            </li>
-          </ul>
-        </Col>
-      </Row>
-
-      <Row>
-        <Editor projectId={projectsList[3]} hideDataImportButton={true} />
-      </Row>
-
-      <Row>
-        <Col md={{ span: 10, offset: 1 }}>
-          <hr />
-          <p>
-            So, that was how I found the records of my cousin. I still didn’t
-            know if those records were gonna help, but it started to become
-            interesting. For a while, I even forgot that my cousin might have
-            been lost in the snowstorm. Ah, the guilty pleasure of playing
-            detective. From there I started to trace my cousin, and then… Whoa!
-            Finally! A fish on the hook! Come, human, help me out, my hands are
-            not designed for this—
-          </p>
-          <p>(End of Act 1)</p>
-          <div className="img-container-div">
-            <img src={penguin_div_img} className="img-fluid img-div" />
+          <div className="task-container">
+            <h4>
+              Task 1.1: Create Scatter Plots of penguin characteristics and find the name of the species that is smallest in size.
+            </h4>
+            <ul>
+              <li>
+                Hint 1: Plot the flipper length vs body mass. You can hover your mouse over the data points on the graph to see other details.
+              </li>
+              <li>
+                Hint 2: Use different colors for species.
+              </li>
+              <li>
+                See tutorial cards on scatter plots for more instructions
+              </li>
+            </ul>
+            <Row>
+              <Editor projectId={projectsList[1]} hideDataImportButton={true} />
+            </Row>
           </div>
-        </Col>
-      </Row>
 
-      <Row>
-        <Col md={{ span: 10, offset: 1 }}>
-          <h2>Act 2: Where and When</h2>
+            <p>
+              Ah, that is us! That’s great! Next, can you only plot the data about our species? 
+            </p>
+          
 
-          <p>
-            We got a big fish, human, and I’m not surprised that the fishing rod
-            couldn’t hold. This starts to remind me of a novel that one of your
-            kind wrote, the novel where someone caught a big fish in the middle
-            of the ocean and lost it. It’s pretty romantic, isn’t it?
-          </p>
-          <p>
-            But seriously, your fishing thing works so bad and now I need to get
-            my fur dry—and you’d better dry that shaggy pocket that you put on
-            your body, too. You humans just don’t know how to deal with the sea,
-            do you?
-          </p>
-          <p>
-            Now that we need to dry ourselves on the deck, why don’t we go back
-            to my story? I was there with the big backpack researcher, and we
-            figured out which data belonged to my cousin. You thought then we
-            could just track him down, don’t you? Well, we realized that the
-            researcher was stalking my cousin for her own project, and she
-            didn’t keep the locations and times because she wasn’t really
-            interested in those.
-          </p>
-          <p>
-            Luckily, we had some extra things to help. The human researchers did
-            ask the penguins what names they would use to call different lands
-            and places, and the humans recorded those names as “Penguin Grids”.
-            To say the truth, we don’t really think of places in grids, but that
-            seems to be a metaphor that works for you.
-          </p>
-          <p>
-            And those grid names helped me as well, because the big backpack one
-            also recorded those names, and we could figure out which names were
-            for which places, and roughly figure out where my cousin was going.
-          </p>
-          <hr />
-          <h3>
-            Task 2.1: Use Penguin Grid Names to find out rough locations of the
-            missing cousin.
-          </h3>
-          <ul>
-            <li>
-              Plot out data rows on the map, and color the data marks by Penguin
-              Grid Names. Compare the distribution
-              {CreatePopup(popupTexts, "distribution")} of these and figure out
-              how names and geographic features match.
-            </li>
-            <li>
-              Calculate average longitudes and latitudes for each Penguin Grid
-              Name.
-            </li>
-            <li>
-              Fill in average longitudes and latitudes for the missing cousin’s
-              locations, and plot the missing cousin’s locations onto the map.
-            </li>
-          </ul>
-        </Col>
-      </Row>
-
-      <Row>
-        <Editor
-          projectId={projectsList[4]}
-          hideDataImportButton={true}
-          microworld="maps"
-        />
-      </Row>
-
-      <Row>
-        <Col md={{ span: 10, offset: 1 }}>
-          <hr />
-          <p>
-            So those were the locations, we got them. Then it came to times—I
-            know this is getting technical, but stay with me.
-          </p>
-          <p>
-            From the records, we only knew the “years” according to your human
-            calendars, but that was too rough. We couldn’t figure out where he
-            was heading towards or which records his last locations were if we
-            didn’t have more precise times.
-          </p>
-          <p>
-            That’s when we had a bit more luck: that “specialized device” in the
-            researcher’s backpack was part of their project measuring sea ice
-            levels, and that device somehow snuggled sea ice level measurements
-            and cooling and warming seasons into the dataset.
-          </p>
-          <p>
-            You are wondering how that’s useful, right? I have to say, on that
-            part, the researcher surely outsmarted us both! It was a simple
-            logic: she just assumed that the sea ice level always rose during
-            the cooling season, that is, the first half of your human year, and
-            it always fell during the warming season, i.e. the second half of
-            the year. That way, she only needed to map the sea ice levels on my
-            cousin’s records between the minimum and maximum sea ice levels of
-            each year, and Voila! We knew the order of these records!
-          </p>
-          <p>
-            Did that go too fast? Eh, I guess you have to draw it out yourself.
-            Do you have paper and pencil? Oh, is everything soaked already? Duh.
-            Let’s just use water to draw on the wood planks over there—
-          </p>
-          <hr />
-          <ul>
-            <li>
-              Find the min and max Sea Ice Level values of each year, and store
-              them in variables.
-            </li>
-            <li>
-              Create a new column for time (we call it “Time Interpolation
-              {CreatePopup(popupTexts, "interpolation")}”) by using the min and
-              max sea ice levels of each year.
-              <ul>
-                <li>When in doubt, you could use these formulae:</li>
-                <li>
-                  If in cooling season (first half of year):
-                  <ul>
-                    <li>
-                      Time Interpolation = 0.5 * (Sea Ice Level – Min
-                      Level)/(Max Level – Min Level)
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  If in warming season (second half of year):
-                  <ul>
-                    <li>
-                      Time Interpolation = 0.5 + 0.5 * (Sea Ice Level – Max
-                      Level)/(Min Level – Max Level)
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  Remember that you need to calculate this for each year
-                  separately, so filter the data by year before you start
-                  calculating!{" "}
-                </li>
-                <li>
-                  When you get all the interpolated values (they should all be
-                  between 0.0 and 1.0), create a new column to add these
-                  fractional values to the Year (2007, 2008, or 2009).
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </Col>
-      </Row>
-
-      <Row>
-        <Editor projectId={projectsList[5]} hideDataImportButton={true} />
-      </Row>
-
-      <Row>
-        <Col md={{ span: 10, offset: 1 }}>
-          <hr />
-          <p>
-            See how that worked? No? I know it’s a lot, human. That researcher
-            was smart to come up with this plan. That way we knew how my cousin
-            was moving over time, and the only thing left was to figure out
-            where he was trying to go.
-          </p>
-          <p>
-            For that, if you don’t mind, let’s get into the cabin and talk about
-            it. The wind is getting cold up here on the deck, and I don’t want
-            to catch cold with wet furs.
-          </p>
-          <p>(End of Act 2)</p>
-          <div className="img-container-div">
-            <img src={penguin_div_img} className="img-fluid img-div" />
+          <div className="task-container">
+            <h4>
+              Task 1.2: Create a Scatter Plot of flipper length vs body mass of only the species that you identified in the last task.
+            </h4>
+            <ul>
+              <li>
+                Hint: Use the Filter block.
+              </li>
+            </ul>
+            <Row>
+              <Editor projectId={projectsList[2]} hideDataImportButton={true} />
+            </Row>
           </div>
-        </Col>
-      </Row>
 
-      <Row>
-        <Col md={{ span: 10, offset: 1 }}>
-          <h2>Act 3: Finding Cousin</h2>
-          <p>
-            It surely is cozy down here. I think we’re gonna have a windy sail
-            tonight. I hope the heaters on this ship keep up, or we’ll be frozen
-            by sunrise… Oh, thank you human, how nice of you. Warm drinks are
-            the best. Now, if you don’t mind me adding a sardine in there…
-          </p>
-          <p>
-            Ah, the warmth is making me sleepy. But I guess we should stay awake
-            until we dry ourselves. Let me get back to my story. Where were we?
-            Right, we were trying to figure out where my cousin wanted to go.
-          </p>
-          <p>
-            He is a mysterious one, I tell you. Even I can’t always tell what
-            he’s planning on, so I totally doubted if the records could help.
-            But the researcher, she was totally confident in her data. I totally
-            need to give her a lesson on no stalking policy, though.
-          </p>
+            <p>
+              Aha! That’s much fewer dots! I’m called the smallest of all my family for a reason. Let’s see what else is about my cousin. Oh right, my cousin is definitely under 4500 grams in body mass - he is not that big.
+            </p>
+          
+
+          <div className="task-container">
+            <h4>
+              Task 1.3: On top of the last scatter plot, narrow it down to penguins with a body mass lower than 4500.
+            </h4>
+            <ul>
+              <li>
+              Hint: Use more than one condition. You can use more than one condition in the filter block by clicking on the plus icon at the end of the block. You can also use more than one filter block.
+              </li>
+            </ul>
+            <Row>
+              <Editor projectId={projectsList[3]} hideDataImportButton={true} />
+            </Row>
+          </div>
+
+            <p>
+              This filter thing is really neat - isn't it? I’m impressed - I am usually hard to be impressed as a side note. Just curious, I want to know how many records that we have so far?
+            </p>
+
+          <div className="task-container">
+            <h4>
+              Task 1.4: Make a program to count the number of rows that fits the current condition
+            </h4>
+            <ul>
+              <li>
+                Hint 1: Use the Variable block to help with the counting.
+              </li>
+              <li>
+              Hint 2: After running the program, you can view the value of variable in the panel on the right.
+              </li>
+            </ul>
+            <Row>
+              <Editor projectId={projectsList[4]} hideDataImportButton={true} />
+            </Row>
+          </div>
+
+            <p>
+              Great! I do remember hearing from my parents that our extended family is around 200 in size, so this number seems close enough.
+            </p>
           <hr />
-          <h3>
-            Task 3.1: The traveling penguin now wants to figure out what their
-            cousin was up to. Use the results from the last task to see if
-            there’s a pattern.
-          </h3>
-          <ul>
-            <li>Do you see a pattern on the missing cousin’s movement?</li>
-            <li>Why do you think he moved like that?</li>
-          </ul>
         </Col>
       </Row>
 
       <Row>
-        <Editor
-          projectId={projectsList[6]}
-          hideDataImportButton={true}
-          microworld="maps"
-        />
-      </Row>
-
-      <Row>
         <Col md={{ span: 10, offset: 1 }}>
+          <h2>Act 2: Where and Why</h2>
+
+          <p>
+            Okay, we have narrowed it down quite a bit! I see we are going in the right direction. Let’s see what else we can do -
+          </p>
+          <p>
+            Hmm, these “human notes” that I can see when I hover over the marks in the plot look interesting. It seems like you recorded any unusual characteristics of the penguin that you observed in the notes.  So youre saying that rows with notes about the same unusual mark means they are about the same penguin in different years? That’s gonna be useful!
+          </p>
+          <p>
+            Alright, another specifical thing about my cousin is that he has a really short and deep bill that makes him stand out from others in our species. Let’s see if we can find the records about him. 
+          </p>
+
+
+          <div className="task-container">
+            <h4>
+              Task 2.1: Among the rows narrowed down from the last task, make a scatter plot of bill length and bill depth.
+            </h4>
+            <div className="img-container-front">
+              <img src={penguin_bill_img} className="img-fluid img-front" />
+            </div>
+            <Row>
+              <Editor projectId={projectsList[5]} hideDataImportButton={true} />
+            </Row>
+          </div>
+
+          <div className="task-container">
+            <h4>
+              Task 2.2: In the scatter plot that you just made, find the records about the cousin.
+            </h4>
+            <ul>
+              <li>
+                Hint 1: Look at the shape of the data. Find the cluster of data (where a lot of dots seem to be close to each other) on the plot that represents a short and deep bill. 
+              </li>
+              <li>
+                Hint 2: Note down the special notes in the “human notes” column. The rows with the same mark are records of the same penguin over different years. Again, you can hover your mouse over the data points on the graph to see details. 
+              </li>
+            </ul>
+            <Row>
+              <Editor projectId={projectsList[6]} hideDataImportButton={true} />
+            </Row>
+          </div>
+
+          <p>
+            That’s my cousin! We found him!! Wait, the records are only until 2020… Anyways, let’s see where he went. 
+          </p>
+
+          <div className="task-container">
+            <h4>
+              Task 2.3: Plot the location of the cousin on the map over the years. Find the island that the cousin was on in the year of 2020.
+            </h4>
+            <ul>
+              <li>
+              Hint 1: Plot the penguin location over the years on the map (with latitude and longitude columns). 
+              </li>
+              <li>
+              Hint 2: Filter on 2020 to see the most recent location. 
+              </li>
+            </ul>
+            <Row>
+              <Editor projectId={projectsList[7]} hideDataImportButton={true} />
+            </Row>
+          </div>
+
+          <p>
+            But it doesn’t make sense! This island is pretty far from the land and it will take a few hours for us to swim there from the land! My cousin doesn’t like to swim too far… If the data is not wrong, I’m curious why he showed up on this island in 2020? 
+          </p>
           <p>--</p>
+
           <p>
-            “What do you think?” She asked. I think she was waiting for a
-            positive answer, but—
+            Ah-hah, you have another dataset on sea ice levels over the years! Maybe there are some hints?
           </p>
           <p>
-            “Human, I really can’t tell. He is such a mysterious penguin.” I
-            said.
+            The following is a snapshot (i.e., first few rows) of the dataset:
           </p>
-          <p>We both sighed and sat there for a while.</p>
+          <div className="img-container-front">
+            <img src={data_snapshot_2} className="img-fluid img-front" />
+          </div>
+          
+          <div className="task-container">
+            <h4>
+            Task 2.4: Use this new dataset on sea ice level to find a possible reason that the cousin was on a remote island in 2020.
+            </h4>
+            <ul>
+              <li>
+                Hint 1: Create bar plots of ice level over the years. Remember to filter for the island that the cousin was on. See the tutorial card if you are unsure about how to create a bar plot. 
+              </li>
+              <li>
+                Hint 2: Consider the warming and cooling seasons differently. You may want to make a plot for the warming season and another for the cooling season, or use different colors for the two seasons. 
+              </li>
+            </ul>
+            <Row>
+              <Editor projectId={projectsList[8]} hideDataImportButton={true} />
+            </Row>
+          </div>
+
           <p>
-            “My friend,” she said, “I’m not sure if this is helpful or if it’s
-            gonna make things even worse, but I figured out a few other cases
-            where my fellows were tracking individual penguins, and I asked them
-            to go talk to the penguins they tracked.”
-          </p>
-          <p>
-            “I appreciate that, human. And I’m glad you listened to my lessons
-            on how to talk with penguins.”
-          </p>
-          <p>“Shall we take a look at these stories?”</p>
-          <p>“I don’t know if these are gonna help but… why not?”</p>
-          <p>
-            And so we read through them. Each of these stories is as long as the
-            one I’m telling you right now, so I won’t bother telling you all of
-            them, but in the end—
-          </p>
-          <p>
-            “Yeah, these don’t look really good.” I said. “It’s fine, human. I
-            knew several of us have gone far and tried to explore the ocean, and
-            ended up lost in storms or at sea. This is not news to me. Plus, my
-            families also said my cousin was probably lost in the storm. I won’t
-            be surprised if he indeed was.”
+            Alright, that’s possible. Looks like he found a great alternative to swimming. 
           </p>
           <p>
-            The researcher sat in silence, looking sad for a while, but
-            eventually she stood up.{" "}
+            And because of the low ice level in 2021, it is possible that he is still on the same island! 
           </p>
-          <p>“But I don’t want to just give up.” She said.</p>
-          <p>“Well, you’re stronger than I expected. Got any plans?”</p>
-          <p>“Yes, let’s at least try one more thing.”</p>
+          <p>
+            But it is a large island afterall - do we have some more information on where he might be on the island in 2021? 
+          </p>
           <hr />
-          <h3>
-            Task 3.2: The researcher doesn’t want to give up and suggests we try
-            one last thing: figuring out if there was a strong indicator of
-            snowstorms around the time.
-          </h3>
-          <ul>
-            <li>
-              Update to dataset: a new column “Recorded Snowstorm around the
-              Time” is now added. It’s a binary
-              {CreatePopup(popupTexts, "binary")} column showing if there has
-              been a recorded snowstorm around the estimated time of the year.{" "}
-            </li>
-            <li>
-              Using the new column, try to predict what kinds of data record
-              most possibly indicate snowstorms, and decide how likely it is
-              that the missing cousin was caught in a snowstorm.{" "}
-            </li>
-          </ul>
         </Col>
       </Row>
 
+
       <Row>
-        <Editor projectId={projectsList[7]} hideDataImportButton={true} />
+        <Col md={{ span: 10, offset: 1 }}>
+          <h2>
+            Task 3: Finding the Cousin
+          </h2>
+          <p>
+            Ah, you found the most recent dataset of the year of 2021! 
+          </p>
+          <p>
+            The following is a snapshot (i.e., first few rows) of the dataset:
+          </p>
+          <div className="img-container-front">
+            <img src={data_snapshot_3} className="img-fluid img-front" />
+          </div>
+          <p>
+            Okay, looks like there are a couple of differences - let me see if I understand it correctly: basically you humans had a rough few years due to something called “COVID”. You humans had to stay inside so you wouldn’t get COVID, so you installed automatic penguin cameras on the islands.
+          </p>
+          <p>
+            The camera records most of the penguin characteristics just as before. 
+          </p>
+          <p>
+            Each island has multiple cameras; and the area covered by a camera is called a grid”. So, each island is divided into multiple grids. This is gonna be helpful! If I know which grid he is in, I can just go to that grid and find him!
+          </p>
+          <p>
+            But the camera does not include any human notes - so no special mark for my cousin! What a pity! 
+          </p>
+          <p>
+            Hmm, let me think. Remember I told you that my cousin has a short and deep bill - a really not so sharp bill. Among a big group of penguins, it is safe to say my cousin has the least sharp bill. Can we use this information?
+          </p>
+
+          <div className="task-container">
+            <h4>
+              Task 3.1:  Calculate the ratio of bill length and depth. Put this data into a new column named “bill sharpness”.
+            </h4>
+            <ul>
+              <li>
+                Hint 1: Add a new column using the “Add column” button on the right. 
+              </li>
+              <li>
+                Hint 2: Use the operation blocks for calculation. . 
+              </li>
+            </ul>
+            <Row>
+              <Editor projectId={projectsList[9]} hideDataImportButton={true} />
+            </Row>
+          </div>
+          
+          <div className="task-container">
+            <h4>
+            Task 3.2:  Find the minimum bill sharpness on the island across all grids. The grid with the minimum bill sharpness is where the cousin is.
+            </h4>
+            <ul>
+              <li>
+                Hint 1: Filter the data for the island that we found out from the previous tasks. 
+              </li>
+              <li>
+              Hint 2: Use the Groupby block and group on grids. 
+              </li>
+            </ul>
+            <Row>
+              <Editor projectId={projectsList[10]} hideDataImportButton={true} />
+            </Row>
+          </div>
+
+          <p>
+            Ah-ha! I now know where my cousin is! Thank you so much for your help. I’m off to meet him!
+          </p>
+          <hr />
+        </Col>
       </Row>
 
       <Row>
         <Col md={{ span: 10, offset: 1 }}>
-          <hr />
+        <h2>
+          Task 4: More Adventures with the Data!
+        </h2>
+        <div className="task-container">
           <p>
-            I don’t know what I can tell you, human. Honestly, those possibility
-            numbers didn’t mean much to me, but in our version of the model,
-            things surely looked bad. At the end, I thought we were stuck. It
-            was late in the night, and both of us were exhausted. People have
-            tried to search the place where my cousin last appeared, and nothing
-            was found. I was making up my mind to accept that he was lost
-            forever.
+            That was quite a journey with the dataset! One powerful thing with data is that you can have multiple adventures with the same dataset!
           </p>
           <p>
-            And that’s when the airmails arrived at the Palmer Station. In
-            there, humans found a curious postcard from, I think you called that
-            place Falkland Islands. And guess what? My cousin made his bill
-            print on the postcard! He has left the snow lands and gone that far,
-            and till today I still have no idea how he did that. The researcher
-            would say let’s pull up the ship schedules and see if he caught a
-            ship just like I do. I would say thanks but I’m too tired to go
-            through your records once more. But we did it anyway—we compared the
-            size of the bill print with the records, and they surely matched.
+            Now, think about what other questions you can ask about the dataset, use Dataland to answer those questions - choose your own adventures!
           </p>
-          <p>
-            So, that’s my story, human. I’m glad you’ve stayed this far, and I’m
-            sorry it’s kind of an anti-climax. The researcher said data analyses
-            could end up with not so exciting or even confusing results. I guess
-            it’s just like the slow fishing thing you humans do. Maybe you are
-            aiming at a big fish, but maybe your rod breaks. Or maybe you’ll
-            eventually make a smaller catch, and I guess you should still feel
-            proud of it. After all it’s part of the stories we all tell, of
-            ourselves, of things and fellows around us. Well, at least I am
-            satisfied at the end.
-          </p>
-          <p>
-            Now, since my feathers are dry, and so is your shaggy pocket, I
-            suggest we both take a nap, and keep it warm through this windy
-            night. The warm air from the heaters is so nice, and I bet tomorrow
-            we will see a brilliant sunrise… Did that rhyme? O, me, a traveling
-            penguin poet…
-          </p>
-          <p>(THE END)</p>
-          <div className="img-container-div">
-            <img src={penguin_div_img} className="img-fluid img-div" />
+            <Row>
+              <Editor projectId={projectsList[11]} hideDataImportButton={true} />
+            </Row>
           </div>
+          <hr />
         </Col>
       </Row>
+
+      
     </>
   );
 }
