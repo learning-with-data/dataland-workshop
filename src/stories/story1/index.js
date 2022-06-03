@@ -111,6 +111,7 @@ function Story() {
     const getProjectList = async () => {
       const result = await projectsService.find({
         query: {
+          $limit: 20,
           notebookId: NOTEBOOK_ID,
           $select: ["id"],
           $sort: { notebookSequence: 1 },
