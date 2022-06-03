@@ -370,7 +370,7 @@ function Story() {
               </li>
             </ul>
             <Row>
-              <Editor projectId={projectsList[7]} hideDataImportButton={true} />
+              <Editor projectId={projectsList[7]} microworld="maps" hideDataImportButton={true} />
             </Row>
           </div>
 
